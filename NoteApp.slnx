@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="noteapp.client/noteapp.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="NoteApp.Server/NoteApp.Server.csproj" />
+  <Project Path="NoteApp.Tests/NoteApp.Tests.csproj" />
+</Solution>

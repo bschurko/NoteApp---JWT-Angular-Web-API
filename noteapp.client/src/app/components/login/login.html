@@ -1,0 +1,12 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h2>Login</h2>
+
+  <span for="txtLogin">UserName</span>
+  <input formControlName="username" type="text" id="txtLogin" />
+
+  <span for="txtPassword">Password</span>
+  <input formControlName="password" type="password" id="txtPassword" />
+
+  <input type="submit" value="Login" id="btnSubmit" />
+  <button (click)="authorizedEndpoint()">Access Authorized EndPoint</button>
+</form>

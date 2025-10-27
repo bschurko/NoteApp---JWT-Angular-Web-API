@@ -1,0 +1,10 @@
+.no-bullets {
+  list-style: none;
+  padding-left: 0; /* Remove default padding too */
+  margin-left: 0;
+}
+
+.no-bullets li {
+  list-style: none;
+}
+

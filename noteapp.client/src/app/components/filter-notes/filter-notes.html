@@ -1,0 +1,7 @@
+
+<span>Choose Filter: </span>
+<select [(ngModel)]="selectedOption">
+  <option *ngFor="let option of filterOptions" [value]="option.value">
+    {{ option.label }}
+  </option>
+</select>

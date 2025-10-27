@@ -1,0 +1,30 @@
+<div class="container text-center justify-content-center">
+  <div class="row">
+    <div class="col">
+      <button (click)="logout()" class="float-end">Logout</button>
+      <button (click)="authorizedEndpoint()">Access Authorized EndPoint</button>
+      <a href="{{API_URL}}Account/GetAllUsers">Authorized URL</a>
+    </div>
+    <div class="col">
+    </div>
+  </div> <div class="row">
+    <div class="col">
+      <app-filter-notes class="float-start"></app-filter-notes>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-search-notes class="float-start"></app-search-notes>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-notes-list></app-notes-list>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="container text-center justify-content-center">
+  <div class="row">
+    <div class="col">
+      <button name="editNoteBtn" (click)="onEditNote()" class="editNoteButton">Edit Note</button>
+    </div>
+    <div class="col">
+      <button name="createNoteBtn" (click)="onCreateNote()" class="editNoteButton">Create Note</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    
+      <span for="noteId">ID:</span>
+      <input type="text" id="noteId" [(ngModel)]="note.id" disabled="disabled" />
+      <br />
+      <span for="noteTitleId">Title:</span>
+      <input type="text" id="noteTitleId" [(ngModel)]="note.title" [disabled]="isEditing || isNewNote ? false : true" />
+
+    </div>
+    <div class="col">
+      <img [src]="note.imagePath" class="imagePath" alt="Notes Image" />
+      <input type="text" [(ngModel)]="note.imagePath" [disabled]="isEditing || isNewNote ? false : true" />
+    </div>
+    <div class="col">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="pinnedCheckbox" [(ngModel)]="note.isPinned" [disabled]="isEditing || isNewNote ? false : true" name="pinnedCheckbox" checked>
+        <label class="form-check-label" for="pinnedCheckbox">Pinned</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="archivedCheckbox" [(ngModel)]="note.isArchived" [disabled]="isEditing || isNewNote ? false : true" name="archivedCheckbox">
+        <label class="form-check-label" for="pinnedCheckbox">Archived</label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="mb-5">
+        <label for="contentTextarea" class="form-label">Notes Content</label>
+        <textarea class="form-control" id="contentTextarea" [disabled]="isEditing || isNewNote ? false : true"
+                  [(ngModel)]="note.content" name="contentTextarea" rows="4">{{note.content}}</textarea>
+      </div>
+    </div>
+    <div class="col">
+      <span for="dateCreatedId">Created:</span>
+      <input type="text" id="dateCreatdId" [(ngModel)]="note.dateCreated" [disabled]="isEditing || isNewNote ? false : true" />
+      <br />
+      <span for="dateUpdatedId">Updated:</span>
+      <input type="text" id="dateUpdatedId" [(ngModel)]="note.dateUpdated" [disabled]="isEditing || isNewNote ? false : true" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <input style="width:400px;" [disabled]="isEditing || isNewNote ? false : true" type="text"
+             [(ngModel)]="note.tags" name="tagsText" placeholder="Enter tags, comma separated." />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    <button *ngIf="isNewNote || isEditing" (click)="onSaveNote()">Save Note</button>
+      </div>
+  </div>
+</div>
