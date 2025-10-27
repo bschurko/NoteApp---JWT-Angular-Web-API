@@ -17,7 +17,7 @@ export class NotesList implements OnInit {
   activeLinkId: string = '';
 
   constructor(private service: NoteService,
-    private broadcastService: BroadcastService,
+    private broadcastService: BroadcastService<Note>,
     private refreshNotesBroadcast: RefreshNotes) { }
    
   ngOnInit() {

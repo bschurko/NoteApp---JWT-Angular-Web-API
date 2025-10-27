@@ -83,7 +83,7 @@ namespace NoteApp.Tests.Integration
             // Arrange
             var request = new AuthenticationRequest
             {
-                Email = "newuser@example.com",
+      
                 UserName = "newuser@example.com",
                 Password = "NewUser@123"
             };
@@ -104,7 +104,7 @@ namespace NoteApp.Tests.Integration
             // Arrange
             var request = new AuthenticationRequest
             {
-                Email = "testuser@example.com", // Already exists
+     
                 UserName = "testuser@example.com",
                 Password = "Test@123456"
             };
@@ -122,7 +122,7 @@ namespace NoteApp.Tests.Integration
             // Arrange
             var request = new AuthenticationRequest
             {
-                Email = "weakpass@example.com",
+        
                 UserName = "weakpass@example.com",
                 Password = "123" // Too weak
             };
@@ -140,7 +140,7 @@ namespace NoteApp.Tests.Integration
             // Arrange
             var request = new AuthenticationRequest
             {
-                Email = "notanemail",
+                
                 UserName = "notanemail",
                 Password = "ValidPass@123"
             };
@@ -162,7 +162,7 @@ namespace NoteApp.Tests.Integration
             // Arrange
             var request = new AuthenticationRequest
             {
-                Email = "testuser@example.com",
+            
                 UserName = "testuser@example.com",
                 Password = "Test@123456"
             };
@@ -185,7 +185,7 @@ namespace NoteApp.Tests.Integration
             // Arrange
             var request = new AuthenticationRequest
             {
-                Email = "testuser@example.com",
+            
                 UserName = "testuser@example.com",
                 Password = "WrongPassword@123"
             };
@@ -203,7 +203,7 @@ namespace NoteApp.Tests.Integration
             // Arrange
             var request = new AuthenticationRequest
             {
-                Email = "nonexistent@example.com",
+             
                 UserName = "nonexistent@example.com",
                 Password = "Password@123"
             };
@@ -221,7 +221,7 @@ namespace NoteApp.Tests.Integration
             // Arrange
             var request = new AuthenticationRequest
             {
-                Email = "",
+           
                 UserName = "",
                 Password = ""
             };
@@ -254,7 +254,7 @@ namespace NoteApp.Tests.Integration
             // Arrange - Login first
             var loginRequest = new AuthenticationRequest
             {
-                Email = "testuser@example.com",
+             
                 UserName = "testuser@example.com",
                 Password = "Test@123456"
             };
@@ -325,7 +325,7 @@ namespace NoteApp.Tests.Integration
             // Step 1: Register
             var registerRequest = new AuthenticationRequest
             {
-                Email = "flowtest@example.com",
+     
                 UserName = "flowtest@example.com",
                 Password = "FlowTest@123"
             };
@@ -336,7 +336,7 @@ namespace NoteApp.Tests.Integration
             // Step 2: Login
             var loginRequest = new AuthenticationRequest
             {
-                Email = "flowtest@example.com",
+         
                 UserName = "flowtest@example.com",
                 Password = "FlowTest@123"
             };
@@ -365,7 +365,7 @@ namespace NoteApp.Tests.Integration
             // Arrange
             var loginRequest = new AuthenticationRequest
             {
-                Email = "testuser@example.com",
+               
                 UserName = "testuser@example.com",
                 Password = "Test@123456"
             };
@@ -429,7 +429,7 @@ namespace NoteApp.Tests.Integration
         {
             var loginRequest = new AuthenticationRequest
             {
-                Email = "testuser@example.com",
+
                 UserName = "testuser@example.com",
                 Password = "Test@123456"
             };
@@ -443,7 +443,7 @@ namespace NoteApp.Tests.Integration
         {
             var loginRequest = new AuthenticationRequest
             {
-                Email = "testuser@example.com",
+
                 UserName = "testuser@example.com",
                 Password = "Test@123456"
             };

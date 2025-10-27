@@ -17,12 +17,14 @@ export class EditNotes implements OnInit {
   isEditing: boolean = false;
 
   constructor(
-    private broadcastService: BroadcastService,
+    private broadcastService: BroadcastService<Note>,
     private noteService: NoteService,
     private refreshNotesBroadcast: RefreshNotes) { }
 
   ngOnInit() {
-    this.broadcastService.sourceMessage.subscribe(msg => this.note = msg);
+    this.broadcastService.sourceMessage.subscribe((msg)  => this.note = msg);
+
+
     this.note.id = "0";
   }
 
